@@ -1,0 +1,110 @@
+/* ============================================
+   Login Page Specific Styles
+   ============================================ */
+
+/* Login Banner */
+.login-banner {
+    background: linear-gradient(135deg, #2c2c2c 0%, #3a3a3a 100%);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.login-banner h1 {
+    color: #e0e0e0;
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+/* Login Image Section */
+.image-section {
+    background-image: url('../assets/headphones.jpg');
+    background-size: cover;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 2rem;
+}
+
+.image-section .logo {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    color: #d4af37;
+    font-size: 2rem;
+}
+
+.headphones-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Placeholder for headphones image */
+.headphones-placeholder {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    background: linear-gradient(135deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.2) 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+.headphones-placeholder::before {
+    content: '🎧';
+    font-size: 4rem;
+    opacity: 0.3;
+}
+
+/* Login Page Responsive Styles */
+@media (max-width: 1024px) {
+    .image-section {
+        min-height: 385px;
+        background-position-y: -73px;
+        padding: 1.5rem;   
+    }
+
+    .image-section .logo {
+        top: 1rem;
+        left: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .login-banner h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 834px) {
+    .login-banner {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-banner {
+        display: none;
+        padding: 2rem 1rem;
+    }
+
+    .login-banner h1 {
+        font-size: 2rem;
+    }
+
+    .image-section {
+        min-height: 250px;
+        background-position-y: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-banner h1 {
+        font-size: 1.5rem;
+    }
+}

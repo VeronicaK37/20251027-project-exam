@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOROFF - Checkout</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/checkout.css">
+</head>
+<body class="checkout-body">
+    <!-- Header -->
+    <header class="header">
+        <a href="./index.html" class="logo">NOROFF</a>
+        <nav class="nav-links">
+            <a href="#">ABOUT</a>
+            <a href="#">CONTACT</a>
+            <a href="#" class="nav-icon-link search-link">SEARCH</a>
+            <a href="./cart.html" class="nav-icon-link cart-icon">
+                <span class="notification-badge">0</span>
+            </a>
+            <a href="./login.html" class="nav-icon-link login-icon" id="loginLink">LOGIN</a>
+            <span class="nav-icon-link user-name" id="userName" style="display: none;"></span>
+        </nav>
+    </header>
+
+    <!-- Checkout Hero -->
+    <section class="checkout-hero">
+        <div class="hero-overlay">
+            <h1>CHECKOUT</h1>
+            <div class="breadcrumb">
+                <a href="./index.html">Home</a> | <a href="./cart.html">Cart</a> | <span>Checkout</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="checkout-page">
+        <div class="checkout-container">
+            <!-- Left Column: Checkout Form -->
+            <div class="checkout-form-section">
+                <!-- Payment Method -->
+                <section class="form-section">
+                    <h2>SELECT PAYMENT METHOD</h2>
+                    <div class="payment-methods-layout">
+                        <div class="payment-left">
+                            <div class="credit-card-header">
+                                <label class="payment-option">
+                                    <input type="radio" name="paymentMethod" value="creditCard" checked>
+                                    <span>Credit Card</span>
+                                </label>
+                                <div class="card-logos">
+                                    <img src="./assets/visa.png" alt="VISA" class="card-logo-img">
+                                    <img src="./assets/mastercard.png" alt="Mastercard" class="card-logo-img">
+                                    <img src="./assets/c2.png" alt="JCB" class="card-logo-img">
+                                    <img src="./assets/c1.png" alt="AMEX" class="card-logo-img">
+                                </div>
+                            </div>
+                            <div class="credit-card-form" id="creditCardForm">
+                                <div class="form-group">
+                                    <label for="cardNumber">Card Number*</label>
+                                    <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cardName">Name on card*</label>
+                                    <input type="text" id="cardName" name="cardName" placeholder="John Doe" required>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="expiryDate">Expiration Date (MM/YY)*</label>
+                                        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" maxlength="5" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV*</label>
+                                        <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="4" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="alternative-payments">
+                                <div class="form-group">
+                                    <label for="paypalEmail">Paypal</label>
+                                    <input type="email" id="paypalEmail" name="paypalEmail" placeholder="Enter your PayPal email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="gpayEmail">GPay</label>
+                                    <input type="email" id="gpayEmail" name="gpayEmail" placeholder="Enter your Google Pay email">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Shipping Address -->
+                <section class="form-section">
+                    <h2>SHIPPING ADDRESS</h2>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="sameAsBilling">
+                            <span>Same as my bill address</span>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone number*</label>
+                        <div class="phone-input-group">
+                            <select id="countryCode" name="countryCode">
+                                <option value="+1">US (+1)</option>
+                                <option value="+44">UK (+44)</option>
+                                <option value="+86">CN (+86)</option>
+                                <option value="+47">NO (+47)</option>
+                                <option value="+91">IN (+91)</option>
+                            </select>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number (only digits)" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="streetAddress">Street name and house number*</label>
+                        <input type="text" id="streetAddress" name="streetAddress" placeholder="Enter your street name and house number" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="region">Region*</label>
+                            <input type="text" id="region" name="region" placeholder="Enter Region" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City*</label>
+                            <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postalCode">Postal code*</label>
+                        <input type="text" id="postalCode" name="postalCode" placeholder="Enter you postal code" required>
+                    </div>
+
+                    <div class="form-group remember-checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="rememberInfo">
+                            <span>save my information for future checkout</span>
+                        </label>
+                    </div>
+                </section>
+
+                
+            </div>
+
+            <!-- Right Column: Order Summary -->
+            <div class="order-summary-section">
+                <h2>YOUR ORDER</h2>
+                <div id="orderItemsList">
+                    <!-- Order items will be rendered here -->
+                </div>
+
+                <div class="discount-section">
+                    <h3>DISCOUNT CODE</h3>
+                    <div class="discount-input-group">
+                        <input type="text" id="discountCode" placeholder="Apply coupon code">
+                        <button type="button" id="applyDiscountBtn" class="btn-apply">APPLY</button>
+                    </div>
+                </div>
+
+                <div class="order-breakdown">
+                    <div class="summary-row">
+                        <span>SUBTOTAL</span>
+                        <span id="orderSubtotal">$ 0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>DISCOUNT</span>
+                        <span id="orderDiscount">$ 0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>SHIPPING CHARGES</span>
+                        <span id="orderShipping">$ 0</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>GRAND TOTAL</span>
+                        <span id="orderGrandTotal">$ 0.00</span>
+                    </div>
+                </div>
+
+                <button type="button" id="payNowBtn" class="btn-pay-now">PAY NOW</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>NOROFF</h3>
+                <p>Empower Individuals in Creating A Personalized Life</p>
+                <div class="contact-info">
+                    <a href="mailto:contact@noroff.com">
+                        <span>✉️</span> contact@noroff.com
+                    </a>
+                    <a href="tel:+0047123456">
+                        <span>📞</span> +0047123456
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column collapsible">
+                <h4>INFO</h4>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Policy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Our Story</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column collapsible">
+                <h4>SHOP</h4>
+                <ul>
+                    <li><a href="#">Beauty</a></li>
+                    <li><a href="#">Cloth</a></li>
+                    <li><a href="#">Electronics</a></li>
+                    <li><a href="#">Perfume</a></li>
+                    <li><a href="#">Lighting</a></li>
+                    <li><a href="#">View All</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column collapsible">
+                <h4>CUSTOMER</h4>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Exchange</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>SOCIAL</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" title="Facebook">f</a>
+                    <a href="#" class="social-icon" title="Twitter">🐦</a>
+                    <a href="#" class="social-icon" title="Instagram">📷</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/api.js"></script>
+    <script src="./js/footer.js"></script>
+    <script src="./js/checkout.js"></script>
+</body>
+</html>
+

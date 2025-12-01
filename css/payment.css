@@ -1,0 +1,75 @@
+/* ============================================
+   Payment Success Page
+   ============================================ */
+
+.payment-body {
+    background-color: #fff;
+}
+
+.payment-page {
+    background-color: #f8f4f1;
+    padding: 4rem 1.5rem 5rem;
+}
+
+.payment-container {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+    background: #fff;
+    border-radius: 12px;
+    padding: 3rem 2.5rem 3.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+}
+
+.payment-icon-wrapper {
+    margin-bottom: 2rem;
+}
+
+.payment-icon-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #4caf50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.payment-icon-check {
+    color: #fff;
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.payment-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #2e7d32;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.payment-subtitle {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 2.5rem;
+}
+
+.payment-back-btn {
+    max-width: 260px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .payment-container {
+        padding: 2.5rem 1.75rem 3rem;
+    }
+
+    .payment-title {
+        font-size: 1.4rem;
+    }
+}
+
+

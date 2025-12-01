@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOROFF - Login</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="#" class="logo">NOROFF</a>
+        <nav class="nav-links">
+            <a href="/">ABOUT</a>
+            <a href="/">CONTACT</a>
+            <a href="#" class="nav-icon-link login-icon">LOGIN</a>
+        </nav>
+    </header>
+
+    <!-- Login Banner -->
+    <section class="login-banner">
+        <h1>LOGIN</h1>
+        <div class="breadcrumb">
+            <a href="#">Home</a> | <span>Login</span>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Image Section -->
+        <div class="image-section">
+            <div class="logo">NOROFF</div>
+        </div>
+
+        <!-- Form Section -->
+        <div class="form-section">
+            <div class="form-container">
+                <h2 class="welcome-title">WELCOME BACK!</h2>
+                <p class="welcome-subtitle">Login to your account.</p>
+
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" placeholder="first.last@stud.noroff.no" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password*</label>
+                        <input type="password" id="password" name="password" placeholder="••••••" required minlength="8">
+                    </div>
+
+                    <button type="submit" class="btn-primary">GET STARTED</button>
+
+                    <div class="divider">
+                        <span>OR</span>
+                    </div>
+
+                    <div class="social-login">
+                        <div class="social-btn" title="Login with Google">
+                            <span style="font-size: 1.5rem; font-weight: bold; color: #4285F4;">G</span>
+                        </div>
+                        <div class="social-btn" title="Login with Apple">
+                            <span style="font-size: 1.3rem;">🍎</span>
+                        </div>
+                    </div>
+
+                    <div class="create-account">
+                        Don't Have An Account? <a href="./register.html">Create Your Free Account</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>NOROFF</h3>
+                <p>Empower Individuals in Creating A Personalized Life</p>
+                <div class="contact-info">
+                    <a href="mailto:contact@noroff.com">
+                        <span>✉️</span> contact@noroff.com
+                    </a>
+                    <a href="tel:+0047123456">
+                        <span>📞</span> +0047123456
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column collapsible">
+                <h4>INFO</h4>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Policy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Our Story</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column collapsible">
+                <h4>SHOP</h4>
+                <ul>
+                    <li><a href="#">Beauty</a></li>
+                    <li><a href="#">Cloth</a></li>
+                    <li><a href="#">Electronics</a></li>
+                    <li><a href="#">Perfume</a></li>
+                    <li><a href="#">Lighting</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column collapsible">
+                <h4>CUSTOMER</h4>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Exchange</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>SOCIAL</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" title="Facebook">f</a>
+                    <a href="#" class="social-icon" title="Twitter">🐦</a>
+                    <a href="#" class="social-icon" title="Instagram">📷</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/footer.js"></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/login.js"></script>
+</body>
+</html>

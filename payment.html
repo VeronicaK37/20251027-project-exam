@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOROFF - Payment</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/checkout.css">
+    <link rel="stylesheet" href="./css/payment.css">
+</head>
+<body class="payment-body">
+    <!-- Header -->
+    <header class="header">
+        <a href="./index.html" class="logo">NOROFF</a>
+        <nav class="nav-links">
+            <a href="#">ABOUT</a>
+            <a href="#">CONTACT</a>
+            <a href="./cart.html" class="nav-icon-link cart-icon">
+                <span class="notification-badge">0</span>
+            </a>
+            <a href="./login.html" class="nav-icon-link login-icon" id="loginLink">LOGIN</a>
+            <span class="nav-icon-link user-name" id="userName" style="display: none;"></span>
+        </nav>
+    </header>
+
+    <!-- Payment Hero -->
+    <section class="checkout-hero">
+        <div class="hero-overlay">
+            <h1>PAYMENT</h1>
+            <div class="breadcrumb">
+                <a href="./index.html">Home</a> |
+                <a href="./cart.html">Cart</a> |
+                <a href="./checkout.html">Checkout</a> |
+                <span>Payment</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="payment-page">
+        <div class="payment-container">
+            <div class="payment-icon-wrapper" aria-hidden="true">
+                <div class="payment-icon-circle">
+                    <span class="payment-icon-check">✓</span>
+                </div>
+            </div>
+            <h2 class="payment-title">THANKS FOR YOUR ORDER!</h2>
+            <p class="payment-subtitle">
+                Thank you for shopping with us and we look forward to seeing you back!
+            </p>
+            <button class="btn-primary payment-back-btn" onclick="window.location.href='./index.html'">
+                BACK TO HOME
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>NOROFF</h3>
+                <p>Empower Individuals in Creating A Personalized Life</p>
+                <div class="contact-info">
+                    <a href="mailto:contact@noroff.com">
+                        <span>✉️</span> contact@noroff.com
+                    </a>
+                    <a href="tel:+0047123456">
+                        <span>📞</span> +0047123456
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column collapsible">
+                <h4>INFO</h4>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Policy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Our Story</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column collapsible">
+                <h4>SHOP</h4>
+                <ul>
+                    <li><a href="#">Beauty</a></li>
+                    <li><a href="#">Cloth</a></li>
+                    <li><a href="#">Electronics</a></li>
+                    <li><a href="#">Perfume</a></li>
+                    <li><a href="#">Lighting</a></li>
+                    <li><a href="#">View All</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column collapsible">
+                <h4>CUSTOMER</h4>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Exchange</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>SOCIAL</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" title="Facebook">f</a>
+                    <a href="#" class="social-icon" title="Twitter">🐦</a>
+                    <a href="#" class="social-icon" title="Instagram">📷</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/api.js"></script>
+    <script src="./js/footer.js"></script>
+    <script src="./js/payment.js"></script>
+</body>
+</html>
+
+

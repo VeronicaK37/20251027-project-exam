@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOROFF - Product Detail</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/product-detail.css">
+</head>
+<body class="product-detail-body">
+    <!-- Header -->
+    <header class="header">
+        <a href="./index.html" class="logo">NOROFF</a>
+        <nav class="nav-links">
+            <a href="#">ABOUT</a>
+            <a href="#">CONTACT</a>
+            <a href="#" class="nav-icon-link search-link">SEARCH</a>
+            <a href="./cart.html" class="nav-icon-link cart-icon">
+                <span class="notification-badge">2</span>
+            </a>
+            <a href="./login.html" class="nav-icon-link login-icon" id="loginLink">LOGIN</a>
+            <span class="nav-icon-link user-name" id="userName" style="display: none;"></span>
+        </nav>
+    </header>
+
+    <!-- Product Detail Banner -->
+    <section class="product-banner">
+        <h1>PRODUCT DETAIL</h1>
+        <p class="breadcrumb">Home | Product Detail</p>
+    </section>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail-section">
+        <div class="product-detail-container">
+            <!-- Product Image -->
+            <div class="product-image-wrapper">
+                <div class="product-tag" id="productTag"></div>
+                <img id="productImage" src="" alt="Product image">
+                <button class="product-share-button" id="shareButton" aria-label="Share product">
+                    <img src="./assets/share.jpg" alt="Share product">
+                </button>
+            </div>
+
+            <!-- Product Info -->
+            <div class="product-info">
+                <h2 id="productTitle" class="product-title"></h2>
+                <p id="productDescription" class="product-description"></p>
+
+                <!-- Price -->
+                <div class="price-section">
+                    <span id="currentPrice" class="current-price"></span>
+                    <span id="originalPrice" class="original-price"></span>
+                    <p class="price-note">price include all taxes</p>
+                </div>
+
+                <!-- Rating -->
+                <div class="rating-section">
+                    <div class="stars" id="ratingStars"></div>
+                    <span id="ratingValue" class="rating-value"></span>
+                </div>
+
+                <!-- Quantity Selector -->
+                <div class="quantity-section">
+                    <label>QUANTITY</label>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" id="decreaseBtn">-</button>
+                        <input type="number" id="quantityInput" value="1" min="1" readonly>
+                        <button class="quantity-btn" id="increaseBtn">+</button>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button class="btn-secondary">SHOP NOW</button>
+                    <button class="btn-primary" id="addToCartBtn">ADD TO CART</button>
+                </div>
+
+                <!-- Reviews Section -->
+                <div class="reviews-section">
+                    <h3 class="reviews-title">REVIEWS</h3>
+                    <div id="reviewsList"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Features -->
+    <section class="footer-features">
+        <div class="feature-item">
+            <div class="feature-icon">🚚</div>
+            <div class="feature-content">
+                <h4>FAST DELIVERY</h4>
+                <p>Delivery In 24 Hours Max</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon">🔒</div>
+            <div class="feature-content">
+                <h4>SAFE PAYMENT</h4>
+                <p>100% Secure Payment</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon">🎧</div>
+            <div class="feature-content">
+                <h4>HELP CENTER</h4>
+                <p>Dedicated 24/7 Support</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <div class="feature-icon">📦</div>
+            <div class="feature-content">
+                <h4>CURATED ITEMS</h4>
+                <p>From Hand Picked Sellers</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>NOROFF</h3>
+                <p>Empower Individuals in Creating A Personalized Life</p>
+                <div class="contact-info">
+                    <a href="mailto:contact@noroff.com">
+                        <span>✉️</span> contact@noroff.com
+                    </a>
+                    <a href="tel:+0047123456">
+                        <span>📞</span> +0047123456
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column collapsible">
+                <h4>INFO</h4>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Policy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Our Story</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column collapsible">
+                <h4>SHOP</h4>
+                <ul>
+                    <li><a href="#">Beauty</a></li>
+                    <li><a href="#">Cloth</a></li>
+                    <li><a href="#">Electronics</a></li>
+                    <li><a href="#">Perfume</a></li>
+                    <li><a href="#">Lighting</a></li>
+                    <li><a href="#">View All</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column collapsible">
+                <h4>CUSTOMER</h4>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Exchange</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>SOCIAL</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" title="Facebook">f</a>
+                    <a href="#" class="social-icon" title="Twitter">🐦</a>
+                    <a href="#" class="social-icon" title="Instagram">📷</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/api.js"></script>
+    <script src="./js/footer.js"></script>
+    <script src="./js/product-detail.js"></script>
+</body>
+</html>
+
