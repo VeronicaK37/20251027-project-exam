@@ -57,12 +57,11 @@
             if (userData && userData.name) {
                 // User is logged in, show username and hide login link
                 userName.textContent = userData.name.toUpperCase();
-                userName.style.display = 'inline-block';
                 loginLink.style.display = 'none';
             } else {
                 // User is not logged in, show login link and hide username
                 userName.style.display = 'none';
-                loginLink.style.display = 'inline-block';
+                // loginLink.style.display = 'inline-block';
             }
         }
     })();
@@ -112,7 +111,7 @@
                         
                         return `
                             <article class="product-card">
-                                <button class="wishlist" aria-label="Save product">♡</button>
+                                <button class="wishlist" aria-label="Save product"></button>
                                 <a href="./product-detail.html?id=${product.id || ''}" style="display: block;">
                                     <img src="${product.image.url}" alt="${product.image.alt || product.title}">
                                 </a>
@@ -122,7 +121,7 @@
                                     </a>
                                     <p class="price">
                                         $${displayPrice.toFixed(2)}
-                                        ${originalPrice ? `<span class="original">$${originalPrice.toFixed(2)}</span>` : ''}
+                                        ${originalPrice ? `<span class="original">original: $${originalPrice.toFixed(2)}</span>` : '<span class="original-placeholder"></span>'}
                                     </p>
                                     <button class="add-btn" data-product-id="${product.id || ''}" data-product-title="${product.title || ''}" data-product-price="${displayPrice}" data-product-image="${product.image?.url || ''}">Add to cart</button>
                                 </div>

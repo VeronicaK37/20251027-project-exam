@@ -10,42 +10,47 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Urbanist', sans-serif;
     color: #333;
     line-height: 1.6;
+}
+
+.font-color-white {
+    color: #fff;
 }
 
 /* Header Styles */
 .header {
     background-color: #fff;
-    padding: 1rem 2rem;
+    padding: 1.5rem 3em 1.5rem 5.75rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    color: #d4af37;
-    font-size: 1.5rem;
+    line-height: 1;
+    color: #D3B393;
+    font-size: 3.75rem;
     font-weight: bold;
     text-decoration: none;
 }
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 5rem;
     align-items: center;
 }
 
 .nav-links a {
-    color:  #9c8368;
+    color:  #D3B393;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 14px;
     transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #d4af37;
+    color: #D3B393;
 }
 
 .nav-icon-link {
@@ -53,14 +58,20 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: #9c8368;
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.3s;
 }
 
+
+.nav-icon-link-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .nav-icon-link:hover {
-    color: #d4af37;
+    color: #D3B393;
 }
 
 .nav-icon-link::before {
@@ -75,30 +86,25 @@ body {
     position: relative;
 }
 
-.cart-icon::before {
-    content: '🛍️';
-}
 
-.login-icon::before {
-    content: '👤';
-}
+
 
 .user-name {
-    color: #9c8368;
+    color: #D3B393;
     font-size: 0.9rem;
     font-weight: 500;
     cursor: default;
 }
 
 .user-name:hover {
-    color: #9c8368;
+    color: #D3B393;
 }
 
 .notification-badge {
     position: absolute;
     top: -8px;
     right: -8px;
-    background-color: #9c8368;
+    background-color: #D3B393;
     color: white;
     border-radius: 50%;
     width: 18px;
@@ -123,7 +129,7 @@ body {
 }
 
 .breadcrumb a:hover {
-    color: #d4af37;
+    color: #D3B393;
 }
 
 /* Main Content */
@@ -182,7 +188,7 @@ body {
 
 .form-group input:focus {
     outline: none;
-    border-color: #d4af37;
+    border-color: #D3B393;
 }
 
 .form-group input:invalid:not(:placeholder-shown) {
@@ -254,21 +260,15 @@ body {
 }
 
 .social-btn {
-    width: 50px;
-    height: 50px;
+    display: flex;
+    width: 43px;
+    height: 43px;
     border-radius: 50%;
     border: 1px solid #ddd;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s;
-    font-size: 1.2rem;
 }
 
 .social-btn:hover {
-    border-color: #d4af37;
+    border-color: #D3B393;
     transform: scale(1.1);
 }
 
@@ -279,7 +279,7 @@ body {
 }
 
 .create-account a {
-    color: #d4af37;
+    color: #D3B393;
     text-decoration: none;
     font-weight: 500;
 }
@@ -304,7 +304,7 @@ body {
 }
 
 .footer-brand h3 {
-    color: #d4af37;
+    color: #D3B393;
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
@@ -330,11 +330,11 @@ body {
 }
 
 .contact-info a:hover {
-    color: #d4af37;
+    color: #D3B393;
 }
 
 .footer-column h4 {
-    color: #d4af37;
+    color: #fff;
     margin-bottom: 1rem;
     font-size: 1rem;
     text-transform: uppercase;
@@ -356,7 +356,7 @@ body {
 }
 
 .footer-column ul li a:hover {
-    color: #d4af37;
+    color: #D3B393;
 }
 
 .social-icons {
@@ -379,7 +379,7 @@ body {
 }
 
 .social-icon:hover {
-    background-color: #d4af37;
+    background-color: #D3B393;
 }
 
 /* Common Responsive Styles */
@@ -399,9 +399,7 @@ body {
         display: none;
     }
 
-    .footer {
-        display: none;
-    }
+
 
     .main-content {
         min-height: 100vh;
@@ -412,6 +410,10 @@ body {
     .header {
         padding: 1rem;
         flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 25px;
     }
 
     .nav-links {
@@ -456,7 +458,7 @@ body {
         content: '▼';
         font-size: 0.8rem;
         transition: transform 0.3s ease;
-        color: #d4af37;
+        color: #D3B393;
     }
 
     .footer-column.collapsible.collapsed {
