@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOROFF - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+<body class="home-body">
+    <!-- Hero Banner -->
+    <section class="hero">
+        <header class="header hero-header">
+            <a href="#" class="logo">NOROFF</a>
+            <nav class="nav-links">
+                <a href="/">ABOUT</a>
+                <a href="/">CONTACT</a>
+                
+                <div class="nav-icon-link-container">
+                    <a href="./cart.html" class="nav-icon-link cart-icon">
+                        <img src="./assets/nav-cart.svg" alt="Cart">
+                        <span class="notification-badge">3</span>
+                    </a>
+                    <a href="./login.html" class="nav-icon-link login-icon" id="loginLink">
+                        <img src="./assets/nav-login.svg" alt="Login">
+                        <span>LOGIN</span>
+                    </a>
+                    <span class="nav-icon-link user-name" id="userName" style="display: none;"></span>
+                </div>
+                
+            </nav>
+        </header>
+        <button class="hero-nav prev" aria-label="Previous banner">&#10094;</button>
+        <button class="hero-nav next" aria-label="Next banner">&#10095;</button>
+        <div class="hero-slider">
+            <article class="hero-slide active" data-index="0">
+                <img src="./assets/banner_bshoes_pink.jpg" alt="Fresh arrival leather shoes">
+                <div class="hero-content">
+                    <h1>Fresh Arrival</h1>
+                    <p class="hero-subtitle">Fresh styles, new beginnings: discover our latest arrivals!</p>
+                    <div class="hero-actions">
+                        <button class="btn-primary btn-bg">Shop Now <img src="./assets/arrow-right.svg" alt=""
+                                style="width: 16px; height: 16px;"></button>
+                    </div>
+                </div>
+            </article>
+            <article class="hero-slide" data-index="1">
+                <img src="./assets/banner_shoes_blue.jpg" alt="Blue running shoes on net">
+                <div class="hero-content">
+                    <h1>Fresh Arrival</h1>
+                    <p class="hero-subtitle">Fresh styles, new beginnings: discover our latest arrivals!</p>
+                    <div class="hero-actions">
+                        <button class="btn-primary btn-bg">Shop Now <img src="./assets/arrow-right.svg" alt=""
+                                style="width: 16px; height: 16px;"></button>
+                    </div>
+                </div>
+            </article>
+            <article class="hero-slide" data-index="2">
+                <img src="./assets/banner_shoes_white.jpg" alt="White floating sneakers">
+                <div class="hero-content">
+                    <h1>Fresh Arrival</h1>
+                    <p class="hero-subtitle">Fresh styles, new beginnings: discover our latest arrivals!</p>
+                    <div class="hero-actions">
+                        <button class="btn-primary btn-bg">Shop Now <img src="./assets/arrow-right.svg" alt=""
+                                style="width: 16px; height: 16px;"></button>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="pagination-dots hero-pagination">
+            <span class="active" data-index="0"></span>
+            <span data-index="1"></span>
+            <span data-index="2"></span>
+        </div>
+    </section>
+
+    <!-- Category pills -->
+    <!-- <section class="category-pills">
+        <button>Beauty</button>
+        <button>Perfume</button>
+        <button>Toy</button>
+        <button class="active">Headphones</button>
+        <button>Storage</button>
+        <button>Electronics</button>
+        <button>Audio</button>
+        <button>Fashion</button>
+        <button>Accessories</button>
+        <button>Watch</button>
+    </section> -->
+
+    <!-- Product grid -->
+    <section class="products">
+        <header class="section-heading">
+            <div>
+                <p class="eyebrow">All Product</p>
+                <h2>Fresh styles, new beginnings.</h2>
+            </div>
+        </header>
+        <div class="product-grid" id="productGrid">
+            <!-- Products will be loaded dynamically -->
+        </div>
+        <div class="pagination-dots product-pagination" id="productPagination">
+            <!-- Pagination controls will be loaded dynamically -->
+        </div>
+    </section>
+
+    <!-- Customer Review -->
+    <section class="reviews">
+        <header class="section-heading">
+            <div>
+                <h2>Review</h2>
+            </div>
+        </header>
+        <div class="review-grid" id="reviewGrid">
+            <!-- Reviews will be loaded dynamically -->
+        </div>
+        <div class="pagination-dots review-pagination" id="reviewPagination">
+            <!-- Review pagination dots will be loaded dynamically -->  
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>NOROFF</h3>
+                <p>Empower Individuals in Creating A Personalized Life</p>
+                <div class="contact-info">
+                    <a href="mailto:contact@noroff.com">
+                        <span>✉️</span> contact@noroff.com
+                    </a>
+                    <a href="tel:+0047123456">
+                        <span>📞</span> +0047123456
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column collapsible">
+                <h4>INFO</h4>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Policy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Our Story</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column collapsible">
+                <h4>SHOP</h4>
+                <ul>
+                    <li><a href="#">Beauty</a></li>
+                    <li><a href="#">Cloth</a></li>
+                    <li><a href="#">Electronics</a></li>
+                    <li><a href="#">Perfume</a></li>
+                    <li><a href="#">Lighting</a></li>
+                    <li><a href="#">View All</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column collapsible">
+                <h4>CUSTOMER</h4>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Exchange</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>SOCIAL</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" title="Facebook">
+                        <img src="./assets/social-icon-1.svg" alt="Facebook">
+                    </a>
+                    <a href="#" class="social-icon" title="Twitter">
+                        <img src="./assets/social-icon-2.svg" alt="Twitter">
+                    </a>
+                    <a href="#" class="social-icon" title="Instagram">
+                        <img src="./assets/social-icon-3.svg" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/api.js"></script>
+    <script src="./js/footer.js"></script>
+    <script src="./js/home.js"></script>
+</body>
+</html>
