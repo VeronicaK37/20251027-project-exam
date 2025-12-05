@@ -34,7 +34,21 @@
 
 .hero-overlay .breadcrumb a,
 .hero-overlay .breadcrumb span {
-    color: rgba(255, 255, 255, 0.9);
+    z-index: 2;
+        position: relative;
+    color: rgb(155 151 151 / 90%);
+}
+
+.hero-overlay .breadcrumb a {
+    
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.hero-overlay .breadcrumb a:hover {
+    color: #D3B393;
+    text-decoration: underline;
 }
 
 /* Cart content */

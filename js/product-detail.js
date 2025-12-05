@@ -11,22 +11,34 @@
         return params.get('id');
     }
 
-    // Display user name if logged in
+    // Handle login/logout display and functionality
     (function() {
         const loginLink = document.getElementById('loginLink');
-        const userName = document.getElementById('userName');
+        const logoutLink = document.getElementById('logoutLink');
         
-        if (loginLink && userName) {
+        if (loginLink && logoutLink) {
             const userData = userManager.getUser();
             
             if (userData && userData.name) {
-                userName.textContent = userData.name.toUpperCase();
-                userName.style.display = 'inline-block';
+                // User is logged in, show logout and hide login
                 loginLink.style.display = 'none';
+                logoutLink.style.display = 'flex';
             } else {
-                userName.style.display = 'none';
-                loginLink.style.display = 'inline-block';
+                // User is not logged in, show login and hide logout
+                loginLink.style.display = 'flex';
+                logoutLink.style.display = 'none';
             }
+            
+            // Add logout functionality
+            logoutLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Clear user data
+                userManager.removeUser();
+                
+                // Redirect to home page
+                window.location.href = './index.html';
+            });
         }
     })();
 
@@ -271,6 +283,21 @@
                 alert('Sharing is not supported in this browser.');
             }
         });
+    })();
+
+    // Search functionality
+    (function() {
+        const searchBtn = document.getElementById('searchBtn');
+        
+        if (searchBtn) {
+            searchBtn.addEventListener('click', () => {
+                const searchTerm = prompt('Enter search term:');
+                if (searchTerm && searchTerm.trim()) {
+                    // Redirect to home page with search
+                    window.location.href = `./index.html?search=${encodeURIComponent(searchTerm)}`;
+                }
+            });
+        }
     })();
 })();
 

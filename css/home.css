@@ -40,7 +40,7 @@
 }
 
 .hero .hero-header .user-name {
-    color: #D3B393;
+    color: #8B6339;
     font-size: 0.9rem;
     font-weight: 500;
     cursor: default;
@@ -114,11 +114,13 @@
     width: auto;
     padding-inline: 2rem;
     background-color: #D3B393;
-    color: #2c2c2c;
+
 }
 
-
-
+.hero .btn-primary a {
+    text-decoration: none;
+    color: #2c2c2c;
+}
 .hero .ghost-button {
     border: 1px solid rgba(251, 226, 201, 0.7);
     color: #D3B393;
@@ -306,6 +308,10 @@
     font-weight: 400;
     text-decoration: line-through;
     font-size: 0.9em;
+}
+
+.price .original-placeholder {
+    height: 23.5px;
 }
 
 .add-btn {

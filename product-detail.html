@@ -14,12 +14,20 @@
 <body class="product-detail-body">
     <!-- Header -->
     <header class="header">
-        <a href="./index.html" class="logo">NOROFF</a>
+        <a href="./index.html" class="logo">
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <img src="./assets/nav-menu.svg" alt="Menu">
+            </button> NOROFF
+        </a>
         <nav class="nav-links">
             <a href="/">ABOUT</a>
             <a href="/">CONTACT</a>
         
             <div class="nav-icon-link-container">
+                <button class="nav-icon-link search-icon" id="searchBtn" aria-label="Search">
+                    <img src="./assets/nav-search.svg" alt="Search">
+                    <span>SEARCH</span>
+                </button>
                 <a href="./cart.html" class="nav-icon-link cart-icon">
                     <img src="./assets/nav-cart.svg" alt="Cart">
                     <span class="notification-badge">3</span>
@@ -28,7 +36,10 @@
                     <img src="./assets/nav-login.svg" alt="Login">
                     <span>LOGIN</span>
                 </a>
-                <span class="nav-icon-link user-name" id="userName" style="display: none;"></span>
+                <a href="#" class="nav-icon-link login-icon" id="logoutLink" style="display: none;">
+                    <img src="./assets/nav-login.svg" alt="Logout">
+                    <span>LOGOUT</span>
+                </a>
             </div>
         
         </nav>
@@ -37,7 +48,7 @@
     <!-- Product Detail Banner -->
     <section class="product-banner">
         <h1>PRODUCT DETAIL</h1>
-        <p class="breadcrumb">Home | Product Detail</p>
+        <p class="breadcrumb"><a href="./index.html">Home</a> | <span>Product Detail</span></p>
     </section>
 
     <!-- Product Detail Section -->
@@ -98,30 +109,27 @@
     <!-- Footer Features -->
     <section class="footer-features">
         <div class="feature-item">
-            <div class="feature-icon">🚚</div>
             <div class="feature-content">
-                <h4>FAST DELIVERY</h4>
+                <h4> <img src="./assets/car.svg" class="feature-icon" alt="Fast Delivery"> FAST DELIVERY</h4>
                 <p>Delivery In 24 Hours Max</p>
             </div>
         </div>
         <div class="feature-item">
-            <div class="feature-icon">🔒</div>
             <div class="feature-content">
-                <h4>SAFE PAYMENT</h4>
+                <h4> <img src="./assets/book.svg" class="feature-icon" alt="Safe Payment"> SAFE PAYMENT</h4>
                 <p>100% Secure Payment</p>
             </div>
         </div>
         <div class="feature-item">
-            <div class="feature-icon">🎧</div>
             <div class="feature-content">
-                <h4>HELP CENTER</h4>
+                <h4> <img src="./assets/vo.svg" class="feature-icon" alt="Help Center">
+                 HELP CENTER</h4>
                 <p>Dedicated 24/7 Support</p>
             </div>
         </div>
         <div class="feature-item">
-            <div class="feature-icon">📦</div>
             <div class="feature-content">
-                <h4>CURATED ITEMS</h4>
+                <h4> <img src="./assets/product.svg" class="feature-icon" alt="Curated Items"> CURATED ITEMS</h4>
                 <p>From Hand Picked Sellers</p>
             </div>
         </div>

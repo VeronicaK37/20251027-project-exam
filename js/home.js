@@ -46,23 +46,34 @@
     setActive(0);
     restartAutoplay();
 
-    // Display user name if logged in
+    // Handle login/logout display and functionality
     (function() {
         const loginLink = document.getElementById('loginLink');
-        const userName = document.getElementById('userName');
+        const logoutLink = document.getElementById('logoutLink');
         
-        if (loginLink && userName) {
+        if (loginLink && logoutLink) {
             const userData = userManager.getUser();
             
             if (userData && userData.name) {
-                // User is logged in, show username and hide login link
-                userName.textContent = userData.name.toUpperCase();
+                // User is logged in, show logout and hide login
                 loginLink.style.display = 'none';
+                logoutLink.style.display = 'flex';
             } else {
-                // User is not logged in, show login link and hide username
-                userName.style.display = 'none';
-                // loginLink.style.display = 'inline-block';
+                // User is not logged in, show login and hide logout
+                loginLink.style.display = 'flex';
+                logoutLink.style.display = 'none';
             }
+            
+            // Add logout functionality
+            logoutLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Clear user data
+                userManager.removeUser();
+                
+                // Redirect to home page (or login page)
+                window.location.href = './index.html';
+            });
         }
     })();
 
@@ -298,4 +309,54 @@
             });
         }
     })();
+
+    // Search functionality
+    (function() {
+        const searchBtn = document.getElementById('searchBtn');
+        
+        // if (searchBtn) {
+        //     searchBtn.addEventListener('click', () => {
+        //         const searchTerm = prompt('Enter search term:');
+        //         if (searchTerm && searchTerm.trim()) {
+        //             // Scroll to products section
+        //             document.querySelector('.products')?.scrollIntoView({ 
+        //                 behavior: 'smooth', 
+        //                 block: 'start' 
+        //             });
+                    
+        //             // You can implement actual search filtering here
+        //             console.log('Searching for:', searchTerm);
+        //         }
+        //     });
+        // }
+    })();
+
+    // Mobile menu functionality
+    // (function() {
+    //     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    //     const navLinks = document.getElementById('navLinks');
+    //     const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        
+    //     if (mobileMenuBtn && navLinks && mobileMenuOverlay) {
+    //         // Toggle menu
+    //         mobileMenuBtn.addEventListener('click', () => {
+    //             navLinks.classList.toggle('active');
+    //             mobileMenuOverlay.classList.toggle('active');
+    //         });
+            
+    //         // Close menu when clicking overlay
+    //         mobileMenuOverlay.addEventListener('click', () => {
+    //             navLinks.classList.remove('active');
+    //             mobileMenuOverlay.classList.remove('active');
+    //         });
+            
+    //         // Close menu when clicking a link
+    //         navLinks.querySelectorAll('a').forEach(link => {
+    //             link.addEventListener('click', () => {
+    //                 navLinks.classList.remove('active');
+    //                 mobileMenuOverlay.classList.remove('active');
+    //             });
+    //         });
+    //     }
+    // })();
 })();
