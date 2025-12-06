@@ -12,6 +12,39 @@
     <link rel="stylesheet" href="./css/cart.css">
 </head>
 <body class="cart-body">
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Mobile Navigation Menu -->
+    <nav class="nav-links" id="navLinks">
+        <button class="close-menu-btn" id="closeMenuBtn" aria-label="Close menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <a href="./index.html">ABOUT</a>
+        <a href="./index.html">CONTACT</a>
+    
+        <div class="nav-icon-link-container">
+            <button class="nav-icon-link search-icon" id="searchBtn" aria-label="Search">
+                <img src="./assets/nav-search.svg" alt="Search">
+                <span>SEARCH</span>
+            </button>
+            <a href="./cart.html" class="nav-icon-link cart-icon">
+                <img src="./assets/nav-cart.svg" alt="Cart">
+                <span class="notification-badge">3</span>
+            </a>
+            <a href="./login.html" class="nav-icon-link login-icon" id="loginLink">
+                <img src="./assets/nav-login.svg" alt="Login">
+                <span>LOGIN</span>
+            </a>
+            <a href="#" class="nav-icon-link login-icon" id="logoutLink" style="display: none;">
+                <img src="./assets/nav-login.svg" alt="Logout">
+                <span>LOGOUT</span>
+            </a>
+        </div>
+    </nav>
+
     <!-- Header -->
     <header class="header">
         <a href="./index.html" class="logo">
@@ -19,27 +52,6 @@
                 <img src="./assets/nav-menu.svg" alt="Menu">
             </button> NOROFF
         </a>
-        <nav class="nav-links">
-            <a href="./index.html">ABOUT</a>
-            <a href="./index.html">CONTACT</a>
-        
-            <div class="nav-icon-link-container">
-                <button class="nav-icon-link search-icon" id="searchBtn" aria-label="Search">
-                    <img src="./assets/nav-search.svg" alt="Search">
-                    <span>SEARCH</span>
-                </button>
-                <a href="./cart.html" class="nav-icon-link cart-icon">
-                    <img src="./assets/nav-cart.svg" alt="Cart">
-                    <span class="notification-badge">3</span>
-                </a>
-                <a href="./login.html" class="nav-icon-link login-icon" id="loginLink">
-                    <img src="./assets/nav-login.svg" alt="Login">
-                    <span>LOGIN</span>
-                </a>
-                <span class="nav-icon-link user-name" id="userName" style="display: none;"></span>
-            </div>
-        
-        </nav>
     </header>
 
     <!-- Cart Hero -->
@@ -178,5 +190,6 @@
     <script src="./js/api.js"></script>
     <script src="./js/footer.js"></script>
     <script src="./js/cart.js"></script>
+    <script src="./js/nav.js"></script>
 </body>
 </html>
