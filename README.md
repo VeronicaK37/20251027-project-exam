@@ -65,7 +65,7 @@ Price, sale price, description
 
 User reviews (from product’s review endpoint)
 
-2. Responsive Navigation
+Responsive Navigation
 
 Mobile hamburger menu
 
